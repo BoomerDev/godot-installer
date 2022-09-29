@@ -28,7 +28,7 @@ print("Created command 'godot4_%s'. You can now run this in the terminal." % ver
 
 yn = input("Would you like install overwrite any previous installation of the Godot engine (/usr/bin/godot4)? ")
 
-if yn:
+if yn[0] in ('Y', 'y'):
     subprocess.run(["cp", "/usr/bin/godot4_%s" % version, "/usr/bin/godot4"])
     subprocess.run(["chmod", "+x", "/usr/bin/godot4"])
 
